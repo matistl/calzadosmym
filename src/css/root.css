@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Prompt&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+:root {
+    --separator: rgb(120, 120, 120);
+    --loaderWrapper: rgba(0, 0, 0, 0.864);
+    --loaderColor: #393939;
+    --navLinkH: rgb(157, 157, 157);
+    --mqn-e2: rgb(211, 211, 211);
+    --wspIcon: rgb(0, 162, 0);
+    --cardBody: #92929269;
+    --selectBoxH: #23b499;
+    --selectColor: #373737;
+    --white: #fff;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 14.4px;
+    overflow-x: hidden !important;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden !important;
+}
+
+header {
+    position: relative;
+}
+
+li .nav-link {
+    margin-left: 15px;
+    margin-right: 20px;
+}
+
+img {
+    user-select: none;
+}
+
+nav {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Navbar*/
+
+.navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: transparent !important;
+    position: absolute;
+}
+
+.navbar-collapse {
+    padding-right: 15px;
+}
+
+.show {
+    padding-bottom: 20vh;
+}
+
+.navbar-brand {
+    padding-left: 30px;
+}
+
+.navbar-toggler {
+    margin-right: 10px;
+    border: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.container-fluid {
+    min-width: 100vw;
+}
+
+.mym-logo {
+    max-width: 100px;
+    max-height: 100px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link {
+    color: var(--white) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link:hover {
+    color: var(--navLinkH) !important;
+}
+
+.nav-link i {
+    padding-bottom: 2px;
+}
+
+nav .bx {
+    padding-right: 7px;
+}
+
+
+/* Cover */
+
+.cover {
+    font-family: 'Prompt', sans-serif;
+    height: 500px;
+    background-image: url("/src/images/additions/cover.svg");
+    color: var(--white);
+    background-size: cover;
+    background-position: bottom;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.textos-cover h1 {
+    color: var(--white);
+    font-weight: 800;
+    font-size: 3.5rem;
+    text-align: initial;
+}
+
+.textos-cover #text-mqn-e-2 {
+    color: var(--mqn-e2);
+    font-size: 1rem;
+}
+
+
+/* WhatsApp contact icon */
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--wspIcon);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+}
+
+.whatsapp-icon a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+.whatsapp-icon .bxl-whatsapp {
+    color: var(--white);
+    font-size: 2.5rem;
+}
+
+.whatsapp-icon .bxl-whatsapp:hover {
+    color: var(--wspIcon)
+}
+
+.whatsapp-icon:hover {
+    background-color: var(--white);
+    transform: scale(1.1);
+}
+
+
+/* ------------------- Content Page ------------------- */
+
+.metodos-de-pago {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.mercado-pago {
+    padding-top: 50px;
+    margin-right: 50px;
+}
+
+.mercado-pago img {
+    max-height: 171px;
+    max-width: 400px;
+}
+
+.efectivo {
+    padding-top: 50px;
+}
+
+.efectivo img {
+    height: 100%;
+    max-width: 450px;
+}
+
+
+/* Cards */
+
+.card {
+    border: 0 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.card-text {
+    max-height: 2rem;
+    font-family: 'Prompt', sans-serif;
+}
+
+.card img {
+    height: 400px;
+}
+
+.card-body {
+    background-color: var(--cardBody);
+    min-height: 7.3rem;
+    margin-bottom: 15px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.price {
+    padding-right: 25px;
+    font-weight: 900;
+}
+
+
+/* Buttons */
+
+.container {
+    height: 50%;
+    width: 50%;
+}
+
+.c-rc {
+    height: 50%;
+    width: auto !important;
+}
+
+.categories-buttons {
+    justify-content: space-around;
+}
+
+.categories-buttons div a {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 14rem;
+}
+
+.categories-buttons a i {
+    padding-right: 5px;
+}
+
+.select-title {
+    text-align: center;
+    margin-top: 50px !important;
+}
+
+.selectbox select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: var(--selectColor);
+    background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Prompt', sans-serif;
+}
+
+.selectbox select::-ms-expand {
+    display: none;
+}
+
+.selectbox {
+    position: relative;
+    display: flex;
+    left: calc(50% - 10em);
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    overflow: hidden;
+    border-radius: .25em;
+}
+
+.selectbox::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #2b2e2e;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .25s all ease;
+}
+
+.selectbox:hover::after {
+    color: var(--selectBoxH);
+}
+
+.box_empty {
+    height: 10rem;
+}
+
+.name-category {
+    text-align: center;
+}
+
+.stock-box {
+    display: flex;
+    justify-content: center;
+}
+
+.stock-icon {
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+
+/* Separador */
+
+.separator {
+    border-top: 2px solid var(--separator);
+    border-radius: 100px;
+    margin: 50px 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ------------------- Loader ------------------- */
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--loaderWrapper);
+    backdrop-filter: blur(15px);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+#loader {
+    border: 16px solid var(--white);
+    border-top: 16px solid var(--loaderColor);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ------------------- Responsive ------------------- */
+
+@media only screen and (max-width: 320px) {
+    nav .container-fluid {
+        min-width: 150%;
+    }
+    .navbar-collapse {
+        background-image: url("/src/images/additions/navbar-color-menu.png");
+        background-blend-mode: darken;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 0;
+    }
+    .container-fluid {
+        padding: 0
+    }
+    .cover {
+        height: 380px;
+    }
+    .textos-cover h1 {
+        font-size: 2.5rem;
+    }
+    .container {
+        width: auto;
+    }
+    .name-category {
+        font-size: 1.5rem;
+    }
+    #ubicacion h2 {
+        text-align: center;
+    }
+    #ubicacion p {
+        padding-right: 5px;
+        text-align: center;
+        padding-left: 5px;
+        font-size: 1.2rem;
+    }
+    .responsive-iframe iframe {
+        height: 325px;
+    }
+    .metodos-de-pago {
+        display: block
+    }
+    .metodos-de-pago .mercado-pago {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    .metodos-de-pago .efectivo {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding-top: 30px;
+    }
+    .metodos-de-pago .mercado-pago img {
+        max-height: 280px;
+        max-width: 280px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 414px) {
+    nav .container-fluid {
+        min-width: 95vw;
+    }
+    .navbar-collapse {
+        background-image: url("/src/images/additions/navbar-color-menu.png");
+        background-blend-mode: darken;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 0;
+    }
+    .textos-cover h1 {
+        font-size: 2.5rem;
+    }
+    .container {
+        width: auto;
+    }
+    #ubicacion h2 {
+        text-align: center;
+    }
+    #ubicacion p {
+        padding-right: 5px;
+        text-align: center;
+        padding-left: 5px;
+        font-size: 1.2rem;
+    }
+    .responsive-iframe iframe {
+        height: 400px;
+    }
+    .metodos-de-pago {
+        display: block
+    }
+    .metodos-de-pago .mercado-pago {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    .metodos-de-pago .efectivo {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding-top: 30px;
+    }
+    .metodos-de-pago .mercado-pago img {
+        max-height: 280px;
+        max-width: 280px;
+    }
+}
+
+@media only screen and (min-width: 414px) and (max-width: 771px) {
+    .navbar-collapse {
+        background-image: url("/src/images/additions/navbar-color-menu.png");
+        background-blend-mode: darken;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 0;
+    }
+    .nav-link {
+        font-size: 1.2rem;
+    }
+    .textos-cover h1 {
+        font-size: 3rem;
+    }
+    .textos-cover p {
+        font-size: 1.2rem;
+    }
+    .name-category {
+        font-size: 2rem;
+    }
+    #ubicacion h2 {
+        font-size: 2rem;
+    }
+    #ubicacion p {
+        font-size: 1.2rem;
+    }
+    .responsive-iframe iframe {
+        height: 300px;
+    }
+    .title-mp {
+        font-size: 2rem;
+    }
+    .metodos-de-pago {
+        display: block
+    }
+    .metodos-de-pago .mercado-pago {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    .metodos-de-pago .efectivo {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding-top: 30px;
+    }
+    .metodos-de-pago .mercado-pago img {
+        max-height: 280px;
+        max-width: 280px;
+    }
+}
+
+@media only screen and (min-width: 771px) and (max-width: 1024px) {
+    .navbar-collapse {
+        background-image: url("/src/images/additions/navbar-color-menu.png");
+        background-blend-mode: darken;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 0;
+    }
+    .nav-link {
+        font-size: 1.25rem;
+    }
+    .textos-cover h1 {
+        font-size: 4rem;
+    }
+    .textos-cover p {
+        font-size: 1.5rem
+    }
+    .name-category {
+        font-size: 2.5rem;
+    }
+    .container {
+        width: auto;
+    }
+    #ubicacion h2 {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    #ubicacion p {
+        padding-right: 5px;
+        text-align: center;
+        padding-left: 5px;
+        font-size: 1.7rem;
+    }
+    .responsive-iframe iframe {
+        height: 500px;
+    }
+    .title-mp {
+        font-size: 2.5rem;
+    }
+    .metodos-de-pago .mercado-pago {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    .metodos-de-pago .efectivo {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    .metodos-de-pago .mercado-pago img {
+        max-height: 350px;
+    }
+    .metodos-de-pago .efectivo img {
+        max-width: 350px;
+    }
+}
+
+
+/*
+320x480 (iPhone SE y otros dispositivos móviles pequeños)
+375x667 (iPhone 6/7/8 y otros dispositivos móviles medianos)
+414x736 (iPhone 6 Plus/7 Plus/8 Plus y otros dispositivos móviles grandes)
+1024x768 (iPad en orientación horizontal)
+1366x768 (laptops y monitores de escritorio pequeños)
+1440x900 (monitores de escritorio medianos)
+1920x1080 (monitores de escritorio grandes)
+*/
