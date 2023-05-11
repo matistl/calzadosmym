@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Prompt&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
 :root {
     --separator: rgb(120, 120, 120);
     --loaderWrapper: rgba(0, 0, 0, 0.864);
@@ -383,6 +384,7 @@ nav .bx {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -395,53 +397,66 @@ nav .bx {
     nav .container-fluid {
         min-width: 150%;
     }
+
     .navbar-collapse {
         background-image: url("/src/images/additions/navbar-color-menu.png");
         background-blend-mode: darken;
         background-color: rgba(0, 0, 0, 0.5);
         padding: 0;
     }
+
     .container-fluid {
         padding: 0
     }
+
     .cover {
         height: 380px;
     }
+
     .textos-cover h1 {
         font-size: 2.5rem;
     }
+
     .container {
         width: auto;
     }
+
     .name-category {
         font-size: 1.5rem;
     }
+
     #ubicacion h2 {
         text-align: center;
     }
+
     #ubicacion p {
         padding-right: 5px;
         text-align: center;
         padding-left: 5px;
         font-size: 1.2rem;
     }
+
     .responsive-iframe iframe {
         height: 325px;
     }
+
     .metodos-de-pago {
         display: block
     }
+
     .metodos-de-pago .mercado-pago {
         display: flex;
         justify-content: center;
         margin: 0;
     }
+
     .metodos-de-pago .efectivo {
         display: flex;
         justify-content: center;
         margin: 0;
         padding-top: 30px;
     }
+
     .metodos-de-pago .mercado-pago img {
         max-height: 280px;
         max-width: 280px;
@@ -452,47 +467,69 @@ nav .bx {
     nav .container-fluid {
         min-width: 95vw;
     }
+
     .navbar-collapse {
         background-image: url("/src/images/additions/navbar-color-menu.png");
         background-blend-mode: darken;
         background-color: rgba(0, 0, 0, 0.5);
         padding: 0;
     }
+
     .textos-cover h1 {
         font-size: 2.5rem;
     }
+
     .container {
         width: auto;
     }
+
     #ubicacion h2 {
         text-align: center;
     }
+
     #ubicacion p {
         padding-right: 5px;
         text-align: center;
         padding-left: 5px;
         font-size: 1.2rem;
     }
+
     .responsive-iframe iframe {
         height: 400px;
     }
+
     .metodos-de-pago {
         display: block
     }
+
     .metodos-de-pago .mercado-pago {
         display: flex;
         justify-content: center;
         margin: 0;
     }
+
     .metodos-de-pago .efectivo {
         display: flex;
         justify-content: center;
         margin: 0;
         padding-top: 30px;
     }
+
     .metodos-de-pago .mercado-pago img {
         max-height: 280px;
         max-width: 280px;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media only screen and (min-width: 475px) and (max-width: 765px) {
+    .container {
+        max-width: 70%;
     }
 }
 
@@ -503,44 +540,56 @@ nav .bx {
         background-color: rgba(0, 0, 0, 0.5);
         padding: 0;
     }
+
     .nav-link {
         font-size: 1.2rem;
     }
+
     .textos-cover h1 {
         font-size: 3rem;
     }
+
     .textos-cover p {
         font-size: 1.2rem;
     }
+
     .name-category {
         font-size: 2rem;
     }
+
     #ubicacion h2 {
         font-size: 2rem;
     }
+
     #ubicacion p {
         font-size: 1.2rem;
     }
+
     .responsive-iframe iframe {
         height: 300px;
     }
+
     .title-mp {
         font-size: 2rem;
     }
+
     .metodos-de-pago {
         display: block
     }
+
     .metodos-de-pago .mercado-pago {
         display: flex;
         justify-content: center;
         margin: 0;
     }
+
     .metodos-de-pago .efectivo {
         display: flex;
         justify-content: center;
         margin: 0;
         padding-top: 30px;
     }
+
     .metodos-de-pago .mercado-pago img {
         max-height: 280px;
         max-width: 280px;
@@ -554,50 +603,63 @@ nav .bx {
         background-color: rgba(0, 0, 0, 0.5);
         padding: 0;
     }
+
     .nav-link {
         font-size: 1.25rem;
     }
+
     .textos-cover h1 {
         font-size: 4rem;
     }
+
     .textos-cover p {
         font-size: 1.5rem
     }
+
     .name-category {
         font-size: 2.5rem;
     }
+
     .container {
         width: auto;
     }
+
     #ubicacion h2 {
         text-align: center;
         font-size: 2.5rem;
     }
+
     #ubicacion p {
         padding-right: 5px;
         text-align: center;
         padding-left: 5px;
         font-size: 1.7rem;
     }
+
     .responsive-iframe iframe {
         height: 500px;
     }
+
     .title-mp {
         font-size: 2.5rem;
     }
+
     .metodos-de-pago .mercado-pago {
         display: flex;
         justify-content: center;
         margin: 0;
     }
+
     .metodos-de-pago .efectivo {
         display: flex;
         justify-content: center;
         margin: 0;
     }
+
     .metodos-de-pago .mercado-pago img {
         max-height: 350px;
     }
+
     .metodos-de-pago .efectivo img {
         max-width: 350px;
     }
