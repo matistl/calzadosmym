@@ -4,10 +4,10 @@ function hideLoader() {
     document.body.style.overflowY = "unset"
 }
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
     this.document.body.style.overflowY = "hidden"
     this.window.scrollTo(0, 0)
-    setTimeout(function() {
+    setTimeout(function () {
         hideLoader();
     }, 1300);
 });

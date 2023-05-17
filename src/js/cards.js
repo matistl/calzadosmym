@@ -84,43 +84,40 @@ function injectedCards(products) {
     for (let i = 0; i < categories.length; i++) {
 
       const categorie = categories[i];
-      // <div class="col-10 col-sm-9 col-md-6 col-lg-4 mt-2">  </div>
+
       const productOfCategories = productsObject.filter(p => p.type === categorie);
 
-      const carouselHtml = `
-                              <div id="${categorie.toLocaleLowerCase()}-carousel" class="carousel slide" data-bs-ride="carousel">
-                                  <div class="carousel-inner">
-                                      ${productOfCategories.map((product, index) =>
-        `<div class="carousel-item ${index === 0 ? 'active' : ''}">
-                                          
-                                              <div class="card">
-                                                  <img class="card-img-top" loading="lazy" src="${product.img}" draggable="false" alt="Articulo de venta, calzado">
-                                                  <div class="card-body">
-                                                      <h3 class="card-text">
-                                                          <span class="price">
-                                                              <span class="badge rounded-pill bg-warning text-dark">${product.price}</span>
-                                                          </span>
-                                                      </h3>
-                                                      <div class="stock-box">
-                                                          <a href="https://wa.me/543815260540?text=${encodeURI(`Hola, ¿el artículo ${product.id} de la categoria ${product.type} esta disponible?`)}" target="_blank" class="ui green button stock-icon">
-                                                              CONSULTAR STOCK
-                                                          </a>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          
-                                      </div>`).join('')}
+      const carouselHtml = `<div id="${categorie.toLocaleLowerCase()}-carousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                              ${productOfCategories.map((product, index) => `
+                              <div class="carousel-item ${index === 0 ? 'active' : ''}">
+                                  <div class="card">
+                                    <img class="card-img-top" loading="lazy" src="${product.img}" draggable="false" alt="Articulo de venta, calzado">
+                                    <div class="card-body">
+                                        <h3 class="card-text">
+                                          <span class="price">
+                                          <span class="badge rounded-pill bg-warning text-dark">${product.price}</span>
+                                          </span>
+                                        </h3>
+                                        <div class="stock-box">
+                                          <a href="https://wa.me/543815260540?text=${encodeURI(`Hola, ¿el artículo ${product.id} de la categoria ${product.type} esta disponible?`)}" target="_blank" class="ui green button stock-icon">
+                                          CONSULTAR STOCK
+                                          </a>
+                                        </div>
+                                    </div>
                                   </div>
-                                  <button class="carousel-control-prev" type="button" data-bs-target="#${categorie.toLocaleLowerCase()}-carousel" data-bs-slide="prev">
-                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Anterior</span>
-                                  </button>
-                                  <button class="carousel-control-next" type="button" data-bs-target="#${categorie.toLocaleLowerCase()}-carousel" data-bs-slide="next">
-                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Siguiente</span>
-                                  </button>
                               </div>
-                              `;
+                              `).join('')}
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#${categorie.toLocaleLowerCase()}-carousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#${categorie.toLocaleLowerCase()}-carousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                            </button>
+                        </div>`;
 
       container.insertAdjacentHTML("beforeend", carouselHtml);
 
@@ -171,6 +168,6 @@ function createCards(type) {
 createCards();
 
 document.getElementById("select-category").addEventListener("change", (event) => {
-  let categoriaSeleccionada = event.target.value;
-  createCards(categoriaSeleccionada);
+  let categorieSelected = event.target.value;
+  createCards(categorieSelected);
 });
