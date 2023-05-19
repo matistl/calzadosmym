@@ -16,6 +16,8 @@
 * {
     scroll-behavior: smooth;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -43,6 +45,7 @@ img {
 
 nav {
     font-family: 'Poppins', sans-serif;
+    z-index: 5
 }
 
 
@@ -104,7 +107,8 @@ nav {
 
 .nav-black {
     filter: brightness(0%);
-    color: #000 !important;
+    color: rgb(11 11 11 / 91%) !important;
+    font-weight: 600;
 }
 
 nav .bx {
@@ -186,6 +190,7 @@ nav .bx {
 .ctg {
     height: auto;
 }
+
 
 
 /* ------------------- Content Page ------------------- */
@@ -273,6 +278,10 @@ nav .bx {
 
 .categories-buttons a i {
     padding-right: 5px;
+}
+
+.clz {
+    z-index: -1;
 }
 
 .select-title {

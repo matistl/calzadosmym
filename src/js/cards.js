@@ -101,7 +101,7 @@ function injectedCards(products) {
                                         </h3>
                                         <div class="stock-box">
                                           <a href="https://wa.me/543815260540?text=${encodeURI(`Hola, ¿el artículo ${product.id} de la categoría ${product.type} está disponible?`)}" target="_blank" class="ui green button stock-icon">
-                                            CONSULTAR STOCK
+                                            <i class="shop icon"></i> CONSULTAR STOCK
                                           </a>
                                         </div>
                                       </div>
