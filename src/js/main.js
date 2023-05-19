@@ -17,7 +17,24 @@ function positionNav() {
     }
 }
 
-let previousSize = window.innerWidth
+function hideLoader() {
+    document.querySelector("#loader").style.display = "none";
+    document.querySelector("#loader-wrapper").style.height = "0"
+    document.body.style.overflowY = "unset"
+}
+
+//
+
+
+window.addEventListener("load", function () {
+    this.document.body.style.overflowY = "hidden"
+    this.window.scrollTo(0, 0)
+    setTimeout(function () {
+        hideLoader();
+    }, 1300);
+});
+
+let previousSize = window.innerWidth;
 
 window.addEventListener("resize", () => {
     positionNav()
@@ -36,6 +53,5 @@ window.addEventListener("resize", () => {
     }
 })
 
-window.addEventListener('scroll', function () {
-    positionNav()
-});
+window.addEventListener("scroll", positionNav);
+

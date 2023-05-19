@@ -118,7 +118,6 @@ nav .bx {
     font-family: 'Prompt', sans-serif;
     height: 100vh;
     background-image: url("/src/images/additions/cover.webp");
-    background-attachment: fixed;
     color: var(--white);
     background-size: cover;
     background-position: bottom;

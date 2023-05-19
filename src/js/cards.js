@@ -155,20 +155,15 @@ function injectedCards(products) {
 }
 
 function createCards(type) {
-  if (type) {
-    let filter = productsObject.filter((product) => {
-      return product.type === type;
-    });
-    injectedCards(filter);
-  }
-  if (!type || type === "All") {
-    injectedCards(productsObject)
-  }
+
+  let filter = productsObject;
+
+  if (type && type !== "All") filter = productsObject.filter((product) => product.type === type);
+
+  injectedCards(filter);
+
 }
 
 createCards();
 
-document.getElementById("select-category").addEventListener("change", (event) => {
-  let categorieSelected = event.target.value;
-  createCards(categorieSelected);
-});
+document.getElementById("select-category").addEventListener("change", (event) => createCards(event.target.value));
