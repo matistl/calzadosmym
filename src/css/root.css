@@ -15,16 +15,17 @@
 
 * {
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 html {
     font-size: 14.4px;
-    overflow-x: hidden !important;
 }
 
 body {
     margin: 0;
     overflow-x: hidden !important;
+    overflow-y: overlay !important;
 }
 
 header {
@@ -51,7 +52,7 @@ nav {
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: transparent !important;
-    position: absolute;
+    position: fixed;
 }
 
 .navbar-collapse {
@@ -99,6 +100,11 @@ nav {
 
 .nav-link i {
     padding-bottom: 2px;
+}
+
+.nav-black {
+    filter: brightness(0%);
+    color: #000 !important;
 }
 
 nav .bx {
@@ -178,6 +184,10 @@ nav .bx {
     transform: scale(1.1);
 }
 
+.ctg {
+    height: auto;
+}
+
 
 /* ------------------- Content Page ------------------- */
 
@@ -198,11 +208,11 @@ nav .bx {
     max-width: 400px;
 }
 
-.efectivo {
+.cash {
     padding-top: 50px;
 }
 
-.efectivo img {
+.cash img {
     height: 100%;
     max-width: 450px;
 }
@@ -267,8 +277,7 @@ nav .bx {
 }
 
 .select-title {
-    text-align: center;
-    margin-top: 50px !important;
+    margin-top: 3rem !important;
 }
 
 .selectbox select {
@@ -399,7 +408,6 @@ nav .bx {
     }
 
     .navbar-collapse {
-        background-image: url("/src/images/additions/navbar-cm.png");
         background-blend-mode: darken;
         background-color: rgba(0, 0, 0, 0.5);
         padding: 0;
@@ -450,7 +458,7 @@ nav .bx {
         margin: 0;
     }
 
-    .payments-methods .efectivo {
+    .payments-methods .cash {
         display: flex;
         justify-content: center;
         margin: 0;
@@ -469,9 +477,7 @@ nav .bx {
     }
 
     .navbar-collapse {
-        background-image: url("/src/images/additions/navbar-color-menu.png");
-        background-blend-mode: darken;
-        background-color: rgba(0, 0, 0, 0.5);
+
         padding: 0;
     }
 
@@ -508,16 +514,17 @@ nav .bx {
         margin: 0;
     }
 
-    .payments-methods .efectivo {
+    .payments-methods .cash {
         display: flex;
         justify-content: center;
         margin: 0;
         padding-top: 30px;
     }
 
-    .payments-methods .mercado-pago img {
-        max-height: 280px;
-        max-width: 280px;
+    .payments-methods .mercado-pago img,
+    .payments-methods .cash img {
+        max-height: 240px;
+        max-width: 240px;
     }
 }
 
@@ -535,9 +542,7 @@ nav .bx {
 
 @media only screen and (min-width: 414px) and (max-width: 771px) {
     .navbar-collapse {
-        background-image: url("/src/images/additions/navbar-color-menu.png");
-        background-blend-mode: darken;
-        background-color: rgba(0, 0, 0, 0.5);
+
         padding: 0;
     }
 
@@ -583,14 +588,15 @@ nav .bx {
         margin: 0;
     }
 
-    .payments-methods .efectivo {
+    .payments-methods .cash {
         display: flex;
         justify-content: center;
         margin: 0;
         padding-top: 30px;
     }
 
-    .payments-methods .mercado-pago img {
+    .payments-methods .mercado-pago img,
+    .payments-methods .cash img {
         max-height: 280px;
         max-width: 280px;
     }
@@ -598,9 +604,7 @@ nav .bx {
 
 @media only screen and (min-width: 771px) and (max-width: 1024px) {
     .navbar-collapse {
-        background-image: url("/src/images/additions/navbar-color-menu.png");
-        background-blend-mode: darken;
-        background-color: rgba(0, 0, 0, 0.5);
+
         padding: 0;
     }
 
@@ -650,18 +654,15 @@ nav .bx {
         margin: 0;
     }
 
-    .payments-methods .efectivo {
+    .payments-methods .cash {
         display: flex;
         justify-content: center;
         margin: 0;
     }
 
-    .payments-methods .mercado-pago img {
+    .payments-methods .mercado-pago img,
+    .payments-methods .cash img {
         max-height: 350px;
-    }
-
-    .payments-methods .efectivo img {
-        max-width: 350px;
     }
 }
 
