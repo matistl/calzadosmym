@@ -1,4 +1,4 @@
-const text1 = document.getElementById('texto-mqn-e-1');
+const text1 = document.getElementById('text-mqn-e-1');
 const text2 = document.getElementById('text-mqn-e-2');
 const text3 = document.getElementById('text-mqn-e-3') ? document.getElementById('text-mqn-e-3') : null;;
 const content1 = text1.innerHTML;

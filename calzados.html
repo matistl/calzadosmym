@@ -35,17 +35,17 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/index">
+                            <a class="nav-link" href="/index.html">
                                 <i class='bx bxs-home-alt-2'></i> INICIO
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/index#ubicacion">
+                            <a class="nav-link" href="/index.html#ubicacion">
                                 <i class='bx bxs-map'></i> UBICACIÓN
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/index#ubicacion">
+                            <a class="nav-link" href="/index.html#ubicacion">
                                 <i class='bx bxs-credit-card-alt'></i> MERCADO PAGO
                             </a>
                         </li>
@@ -54,8 +54,8 @@
             </div>
         </nav>
         <div class="cover">
-            <div class="textos-cover">
-                <h1 id="texto-mqn-e-1">
+            <div class="texts-cover">
+                <h1 id="text-mqn-e-1">
                     Indumentarias y<br>Calzados MYM
                 </h1>
                 <p id="text-mqn-e-2">
@@ -64,57 +64,40 @@
             </div>
         </div>
     </header>
-    <div class="whatsapp-icon">
-        <a href="https://wa.me/543815260540" target="_blank">
-            <i class='bx bxl-whatsapp'></i>
-        </a>
-    </div>
-    <section>
-        <h3 class="text-center" style="margin-top: 3rem;">Filtrar categoria</h3>
-        <div class="selectbox">
-            <select id="select-category">
-                <option disabled selected>Selecciona una opción</option>
-                <option value="BotinFutbol">Botines de Futbol</option>
-                <option value="Polo">Polo</option>
-                <option value="Convers">Convers Botitas</option>
-                <option value="Puma">Puma</option>
-                <option value="LecopSport">Lecop Sport</option>
-                <option value="CalzadosMelisa">Calzados Melisa</option>
-                <option value="Borcegos">Borcegos Damas</option>
-                <option value="McQueen">Mc Queen</option>
-                <option value="Lacoste">Lacoste</option>
-                <option value="Jordan">Jordan</option>
-                <option value="AirForce">Air Force</option>
-                <option value="All">Mostrar todos</option>
-            </select>
-        </div>
-        <div class="container c-rc my-5">
-            <div class="row justify-content-center" id="allCards">
-
+    <article>
+        <section class="whatsapp-icon">
+            <a href="https://wa.me/543815260540" target="_blank">
+                <i class='bx bxl-whatsapp'></i>
+            </a>
+        </section>
+        <section id="clz">
+            <h3 class="text-center" style="margin-top: 3rem;">Filtrar categoria</h3>
+            <div class="selectbox">
+                <select id="select-category">
+                    <option disabled selected>Selecciona una opción</option>
+                    <option value="BotinFutbol">Botines de Futbol</option>
+                    <option value="Polo">Polo</option>
+                    <option value="Convers">Convers Botitas</option>
+                    <option value="Puma">Puma</option>
+                    <option value="LecopSport">Lecop Sport</option>
+                    <option value="CalzadosMelisa">Calzados Melisa</option>
+                    <option value="Borcegos">Borcegos Damas</option>
+                    <option value="McQueen">Mc Queen</option>
+                    <option value="Lacoste">Lacoste</option>
+                    <option value="Jordan">Jordan</option>
+                    <option value="AirForce">Air Force</option>
+                    <option value="All">Mostrar todos</option>
+                </select>
             </div>
-        </div>
-    </section>
+            <div class="container c-rc my-5">
+                <div class="row justify-content-center" id="allCards"></div>
+            </div>
+        </section>
+    </article>
     <script src="/src/js/typing.js"></script>
     <script src="/src/js/cards.js"></script>
     <script src="/src/js/loader.js"></script>
-    <script>
-        let previousSize = window.innerWidth
-        window.addEventListener("resize", () => {
-            const element = document.getElementById("navbarNav")
-            if (window.innerWidth >= 1024 && element.classList.contains("show")) {
-                element.classList.remove("show")
-            }
-            if (previousSize > 765 && window.innerWidth <= 765) {
-                document.querySelector("#allCards").innerHTML = "";
-                injectedCards()
-                previousSize = window.innerWidth
-            } else if (previousSize <= 765 && window.innerWidth > 765) {
-                document.querySelector("#allCards").innerHTML = "";
-                injectedCards()
-                previousSize = window.innerWidth
-            }
-        })
-    </script>
+    <script src="/src/js/main.js"></script>
 </body>
 
 </html>

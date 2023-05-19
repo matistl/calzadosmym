@@ -77,7 +77,7 @@ function injectedCards(products) {
 
   let card;
 
-  if (window.innerWidth <= 765) {
+  if (window.innerWidth < 765) {
 
     const categories = [...new Set(productsObject.map(p => p.type))];
 
@@ -117,7 +117,7 @@ function injectedCards(products) {
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Siguiente</span>
                             </button>
-                        </div>`;
+                          </div>`;
 
       container.insertAdjacentHTML("beforeend", carouselHtml);
 
@@ -125,7 +125,8 @@ function injectedCards(products) {
 
 
   } else if (window.innerWidth > 765) {
-    productsObject.forEach(product => {
+
+    products.forEach(product => {
       card = `
             <div class="col-10 col-sm-9 col-md-6 col-lg-4 mt-2">
               <div class="card">
